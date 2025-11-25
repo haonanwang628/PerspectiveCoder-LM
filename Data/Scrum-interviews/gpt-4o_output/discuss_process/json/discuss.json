@@ -1,0 +1,665 @@
+{
+    "Role_Team": [
+        {
+            "role": "Product Owners",
+            "Intended_Study_Level": "Masters",
+            "Subject": "Geography",
+            "Research_Interest": "Economics",
+            "Dimensions_Source": "Epistemological Assumptions",
+            "positionality": "As a Product Owner with a Master's-level focus in Geography, my research interest lies at the intersection of Economics. My approach to understanding \"How Do Scrum Practitioners Define Software Quality?\" is deeply informed by epistemological assumptions, which shape my views on knowledge and its application. I aim to explore the economic impacts on software quality perceptions, leveraging geographical data analysis skills to offer nuanced insights. While conscious of potential biases due to my epistemological stance and economics lens, I strive for an objective interpretation. My unique positionality enhances my ability to provide a holistic analysis, marrying economic theories with scrum practices in software development.",
+            "init_codebook": [
+                {
+                    "code": "Quality Embedded in Process",
+                    "definition": "Software quality is viewed as an integrated part of both the product and the development process.",
+                    "inclusion_criteria": [
+                        "Mentions that software quality is not just the end product but also the method and process used to develop it."
+                    ],
+                    "exclusion_criteria": [
+                        "References to quality as a fixed characteristic without process consideration."
+                    ],
+                    "typical_examples": [
+                        "Software quality is both outcome and process."
+                    ],
+                    "atypical_examples": [
+                        "In agile, there was a shift toward code quality and a design that responds to change."
+                    ],
+                    "participants": [
+                        "Participant 13",
+                        "Participant 10"
+                    ],
+                    "relevance_to_RQ": "Explains the holistic definition of software quality that includes process aspects.",
+                    "notes": ""
+                },
+                {
+                    "code": "Conformance to Business Needs",
+                    "definition": "A defining attribute of software quality is its ability to meet business requirements.",
+                    "inclusion_criteria": [
+                        "Statements emphasizing alignment with business requirements as crucial to quality."
+                    ],
+                    "exclusion_criteria": [
+                        "Just mentions quality without reference to business needs."
+                    ],
+                    "typical_examples": [
+                        "The product quality is a functioning product free of defects and conforms with the business needs."
+                    ],
+                    "atypical_examples": [
+                        "But for the purpose of a definition, I would say quality takes place in the process level."
+                    ],
+                    "participants": [
+                        "Participant 17"
+                    ],
+                    "relevance_to_RQ": "Addresses the aspect of quality concerning business value, a critical factor in understanding software quality.",
+                    "notes": ""
+                },
+                {
+                    "code": "Challenges in Defining Quality",
+                    "definition": "Quality is acknowledged as a complex and subjective concept.",
+                    "inclusion_criteria": [
+                        "Expressions of difficulty or variability in defining or measuring quality."
+                    ],
+                    "exclusion_criteria": [
+                        "Descriptions of quality as a uniform or simple concept."
+                    ],
+                    "typical_examples": [
+                        "It is a challenging question because quality is a subjective concept."
+                    ],
+                    "atypical_examples": [
+                        "Software quality is the end result."
+                    ],
+                    "participants": [
+                        "Participant 1"
+                    ],
+                    "relevance_to_RQ": "Highlights the subjective nature of quality, implying the need for diverse perspectives in understanding it.",
+                    "notes": ""
+                },
+                {
+                    "code": "Internal Quality Focus",
+                    "definition": "Focus on the internal aspects of code like maintainability, reusability, and readability as essential to quality.",
+                    "inclusion_criteria": [
+                        "Emphasis on code attributes like maintainability, scalability, or simplicity as indicators of quality."
+                    ],
+                    "exclusion_criteria": [
+                        "Focus solely on external or end-user satisfaction aspects."
+                    ],
+                    "typical_examples": [
+                        "Internal quality has to do with the way that the system has been built and designed."
+                    ],
+                    "atypical_examples": [
+                        "First and most, the product confirms to the requirements and free of defects."
+                    ],
+                    "participants": [
+                        "Participant 12"
+                    ],
+                    "relevance_to_RQ": "Offers an insight into the technical dimensions considered in defining software quality.",
+                    "notes": ""
+                },
+                {
+                    "code": "Continuous Improvement",
+                    "definition": "Emphasizes the importance of ongoing process refinement and learning in achieving quality.",
+                    "inclusion_criteria": [
+                        "Mentions of retrospectives, learning from mistakes, and process refinements as part of quality initiatives."
+                    ],
+                    "exclusion_criteria": [
+                        "One-time quality checks or end-of-process quality assessments."
+                    ],
+                    "typical_examples": [
+                        "Agile believes in continuous learning and improvement."
+                    ],
+                    "atypical_examples": [
+                        "Quality doesn\u2019t come without a process and practices."
+                    ],
+                    "participants": [
+                        "Participant 17",
+                        "Participant 6"
+                    ],
+                    "relevance_to_RQ": "Describes a dynamic approach to maintaining high quality in software through iterative improvements.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "role": "Software developers",
+            "Intended_Study_Level": "Bachelors",
+            "Subject": "Statistics",
+            "Research_Interest": "Economics",
+            "Dimensions_Source": "Cultural/Personal Biases",
+            "positionality": "As a software developer with a Bachelor's level understanding, my academic background in statistics and interest in economics guide my approach to understanding how Scrum practitioners define software quality. My research goal is to bridge quantitative skillsets with economic theories to evaluate quality metrics in Scrum practices. However, I acknowledge that my cultural and personal biases might influence how I perceive 'quality.' These biases, along with my technical inclination, could affect both the framing of the research question and the interpretation of data. Thus, my positionality emphasizes a need for reflective awareness, ensuring that my analyses remain objective while being informed by interdisciplinary insights.",
+            "init_codebook": [
+                {
+                    "code": "Quality Definition Levels",
+                    "definition": "Quality is defined at multiple levels, including process, software, and product.",
+                    "inclusion_criteria": [
+                        "Mentions of process, software and product levels of quality."
+                    ],
+                    "exclusion_criteria": [
+                        "Does not mention multiple levels of quality."
+                    ],
+                    "typical_examples": [
+                        "I would say quality takes place in the process level and the software level."
+                    ],
+                    "atypical_examples": [
+                        "Agile advocates for quality but it doesn\u2019t necessarily define it."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 2",
+                        "Participant 17"
+                    ],
+                    "relevance_to_RQ": "This code identifies how Scrum practitioners perceive quality as a multi-layered construct.",
+                    "notes": "The distinction between different levels of quality is significant in understanding the comprehensive view of quality in Scrum."
+                },
+                {
+                    "code": "Conformity to Business Needs",
+                    "definition": "A key measure of quality is the software's conformity to business requirements.",
+                    "inclusion_criteria": [
+                        "Mentions conformity to business requirements or needs."
+                    ],
+                    "exclusion_criteria": [
+                        "Discusses personal definitions of quality unrelated to business needs."
+                    ],
+                    "typical_examples": [
+                        "I believe the key attributes is conformity to business needs and free of defects."
+                    ],
+                    "atypical_examples": [
+                        "Product quality is simply defined as defects free and adds business value."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 16",
+                        "Participant 19"
+                    ],
+                    "relevance_to_RQ": "This code highlights the importance of business alignment as a criterion for quality among Scrum practitioners.",
+                    "notes": "Emphasizing business needs ties quality directly to customer satisfaction and business objectives."
+                },
+                {
+                    "code": "Quality as Subjective",
+                    "definition": "Quality is often seen as a concept with subjective interpretations.",
+                    "inclusion_criteria": [
+                        "References to the subjectivity of quality."
+                    ],
+                    "exclusion_criteria": [
+                        "Provides clear-cut, universally agreed-upon definitions of quality."
+                    ],
+                    "typical_examples": [
+                        "Quality is a subjective concept."
+                    ],
+                    "atypical_examples": [
+                        "An attempt to define it would be three attributes: code quality, external quality and process quality."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 5",
+                        "Participant 15"
+                    ],
+                    "relevance_to_RQ": "Reflects the varying personal interpretations of quality, influencing its operationalization in Scrum.",
+                    "notes": "Subjectivity in defining quality may lead to diverse practices and expectations within Scrum teams."
+                },
+                {
+                    "code": "Continuous Improvement",
+                    "definition": "The process of continual reflection and improvement is critical to maintaining quality.",
+                    "inclusion_criteria": [
+                        "Mentions of reflection, process iteration, and improvement efforts."
+                    ],
+                    "exclusion_criteria": [
+                        "Describes static or one-time process assessments."
+                    ],
+                    "typical_examples": [
+                        "We use retrospectives to continuously reflect on the way we work."
+                    ],
+                    "atypical_examples": [
+                        "Agile believes in responding to change over following a plan."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 2",
+                        "Participant 3"
+                    ],
+                    "relevance_to_RQ": "Reveals a dynamic approach to quality that involves regular process evaluations in Scrum.",
+                    "notes": "This continuous angle is essential in adapting and maintaining high-quality standards in Scrum outputs."
+                },
+                {
+                    "code": "Internal Code Quality",
+                    "definition": "Internal quality focuses on maintainable, understandable, and reusable code.",
+                    "inclusion_criteria": [
+                        "Discusses internal code standards, maintainability, and reusability."
+                    ],
+                    "exclusion_criteria": [
+                        "Only talks about outward or visible quality attributes like UI or user satisfaction."
+                    ],
+                    "typical_examples": [
+                        "We aim for clean code that conforms to well-established guidelines."
+                    ],
+                    "atypical_examples": [
+                        "Agile process is subject to continuous improvements."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 2",
+                        "Participant 12"
+                    ],
+                    "relevance_to_RQ": "Emphasizes the technical side of quality, critical for sustainable and adaptable Scrum practices.",
+                    "notes": "Focus on code quality is crucial for agile methodologies where code can change rapidly."
+                },
+                {
+                    "code": "Quality as Process and Outcome",
+                    "definition": "Quality is both how the software is made and the resulting product.",
+                    "inclusion_criteria": [
+                        "Statements defining quality as both a process and an outcome."
+                    ],
+                    "exclusion_criteria": [
+                        "Describes product quality or process quality in isolation."
+                    ],
+                    "typical_examples": [
+                        "Software quality is both an outcome and a process."
+                    ],
+                    "atypical_examples": [
+                        "We measure the outcome by product quality."
+                    ],
+                    "participants": [
+                        "Participant 13",
+                        "Participant 2"
+                    ],
+                    "relevance_to_RQ": "Integrates process quality with product quality to provide a dual perspective on software quality in Scrum.",
+                    "notes": "This comprehensive view helps bridge development practices with end product expectations."
+                }
+            ]
+        },
+        {
+            "role": "Software developers",
+            "Intended_Study_Level": "Masters",
+            "Subject": "Anthropology",
+            "Research_Interest": "Economics",
+            "Dimensions_Source": "Ethical/Societal Assumptions",
+            "positionality": "As a software developer pursuing a Master's in Anthropology, my research intersects with economics and scrutinizes how Scrum practitioners define software quality. By exploring this, I aim to understand the socio-economic impacts of software development practices. While my technical background could predispose me to emphasize empirical metrics, my anthropology studies remind me to consider cultural and ethical contexts, balancing efficiency with societal values. This interdisciplinary approach compels me to continually challenge ethical biases and assumptions about economic impacts and quality standards. Thus, my positionality shapes a comprehensive analysis that prioritizes diverse perspectives in evaluating software quality.",
+            "init_codebook": [
+                {
+                    "code": "Quality_Depends_on_Requirements",
+                    "definition": "Software quality is defined by how well the final product meets business needs and is free of defects.",
+                    "inclusion_criteria": [
+                        "Mentions of quality being linked to meeting business needs or fulfilling requirements."
+                    ],
+                    "exclusion_criteria": [
+                        "Discussion of quality in terms outside of defects and requirement fulfillment."
+                    ],
+                    "typical_examples": [
+                        "The product quality is a functioning product free of defects and conforms with the business needs."
+                    ],
+                    "atypical_examples": [
+                        "Software quality is first and most the product confirms to the requirements and free of defects."
+                    ],
+                    "participants": [
+                        "Participant 4",
+                        "Participant 5",
+                        "Participant 19"
+                    ],
+                    "relevance_to_RQ": "Helps understand how practitioners define quality in terms of product meeting initial requirements and being defect free.",
+                    "notes": "Focused on product outcome."
+                },
+                {
+                    "code": "Internal_Quality_Standards",
+                    "definition": "Focus on the necessity for clean code, sustainable design, and adherence to guidelines for internal quality.",
+                    "inclusion_criteria": [
+                        "Discussions on clean code, code reviews, and internal standards."
+                    ],
+                    "exclusion_criteria": [
+                        "Mentions of external customer needs."
+                    ],
+                    "typical_examples": [
+                        "We aim for clean code. This mean maintainable code that confirms to well established guidelines."
+                    ],
+                    "atypical_examples": [
+                        "A messy code can have no defects."
+                    ],
+                    "participants": [
+                        "Participant 12",
+                        "Participant 16",
+                        "Participant 28"
+                    ],
+                    "relevance_to_RQ": "Highlights the importance of internal quality standards within Scrum practices.",
+                    "notes": "Focus on internal development processes."
+                },
+                {
+                    "code": "Continuous_Improvement_Process",
+                    "definition": "Agile's process includes regular retrospectives to continuously improve the delivery and process quality.",
+                    "inclusion_criteria": [
+                        "Reference to retrospectives, experimentation, or learning from mistakes."
+                    ],
+                    "exclusion_criteria": [
+                        "Statements strictly about code without process improvement."
+                    ],
+                    "typical_examples": [
+                        "The agile process itself is subject to continuous improvements. We use retrospectives to reflect."
+                    ],
+                    "atypical_examples": [
+                        "Continuous delivery needs a quality process."
+                    ],
+                    "participants": [
+                        "Participant 2",
+                        "Participant 7",
+                        "Participant 9"
+                    ],
+                    "relevance_to_RQ": "Defines quality improvement as an ongoing process of reflection and adaptation.",
+                    "notes": "Ties back to Agile's philosophy."
+                },
+                {
+                    "code": "User_Feedback_Integration",
+                    "definition": "Quality improvement through incorporating user feedback during and after development phases.",
+                    "inclusion_criteria": [
+                        "Mentions of demos, user feedback, or changing requirements."
+                    ],
+                    "exclusion_criteria": [
+                        "Internal quality discussions without user mention."
+                    ],
+                    "typical_examples": [
+                        "When the project was released, there were no surprises for them."
+                    ],
+                    "atypical_examples": [
+                        "We need the whole hour just for this question! But, let\u2019s make it simple."
+                    ],
+                    "participants": [
+                        "Participant 19",
+                        "Participant 21",
+                        "Participant 31"
+                    ],
+                    "relevance_to_RQ": "Describes the role of user feedback in shaping quality definitions in Scrum environments.",
+                    "notes": "Bridges user needs to process quality."
+                },
+                {
+                    "code": "Process_Quality_Assurance",
+                    "definition": "Use of established processes like code reviews and CI/CD to ensure delivery quality.",
+                    "inclusion_criteria": [
+                        "Discussions about testing environments, code reviews, or checklist adherence."
+                    ],
+                    "exclusion_criteria": [
+                        "Solely discussing end product quality without process context."
+                    ],
+                    "typical_examples": [
+                        "We have check lists and documented guidelines."
+                    ],
+                    "atypical_examples": [
+                        "We don\u2019t achieve software quality without a process that implement and foster quality practices."
+                    ],
+                    "participants": [
+                        "Participant 1",
+                        "Participant 3",
+                        "Participant 11"
+                    ],
+                    "relevance_to_RQ": "Shows how process adherence and QA practices define and improve quality.",
+                    "notes": "Focus on structured quality checks."
+                }
+            ]
+        }
+    ],
+    "Agreed_disagreed_codebook": {
+        "agreements": [
+            {
+                "code": "Continuous Improvement",
+                "roles": [
+                    "Product Owners",
+                    "Software developers"
+                ],
+                "reason": "Both roles emphasize the importance of continuous improvement in processes, using retrospectives and process iterations as strategies for maintaining and enhancing quality."
+            },
+            {
+                "code": "Conformance to Business Needs / Conformity to Business Needs",
+                "roles": [
+                    "Product Owners",
+                    "Software developers"
+                ],
+                "reason": "Both roles identify conformity to business needs or requirements as a key component of quality, indicating alignment in perceiving quality through the lens of meeting business objectives and requirements."
+            },
+            {
+                "code": "Internal Quality / Internal Code Quality / Internal Quality Standards",
+                "roles": [
+                    "Product Owners",
+                    "Software developers"
+                ],
+                "reason": "Both roles focus on internal quality aspects such as maintainability, readability, and code standards, highlighting a shared concern for the technical dimensions of software quality."
+            },
+            {
+                "code": "Quality as Process and Outcome / Quality Embedded in Process",
+                "roles": [
+                    "Product Owners",
+                    "Software developers"
+                ],
+                "reason": "Both roles recognize quality as encompassing both the process and the outcome, suggesting a holistic view of quality that incorporates development processes alongside the final product."
+            }
+        ],
+        "disagreements": [
+            {
+                "code": "Challenges in Defining Quality / Quality as Subjective",
+                "roles": [
+                    "Product Owners",
+                    "Software developers"
+                ],
+                "reason": "While both roles acknowledge the complexity and subjectivity in defining quality, the Product Owners emphasize the holistic approach including process aspects, whereas Software developers focus on the multifaceted definitions at process, software, and product levels, suggesting a divergence in emphasis and interpretation."
+            },
+            {
+                "code": "User Feedback Integration",
+                "roles": [
+                    "Software developers"
+                ],
+                "reason": "This code is only present in the Software developers' codebook, highlighting a focus on user feedback as a critical component of quality. The absence of this code in the Product Owners' codebook indicates a potential divergence in how direct user input is considered in their definition of quality."
+            },
+            {
+                "code": "Process Quality Assurance",
+                "roles": [
+                    "Software developers"
+                ],
+                "reason": "Unique to the Software developers' codebook is the emphasis on structured quality checks and adherence to established processes like code reviews and CI/CD. This perspective is not mirrored in the Product Owners' codebook, showing a variance in focus on process assurance measures."
+            }
+        ]
+    },
+    "Final_agreed_codebook": {
+        "discussion_results": [
+            {
+                "code": "User_Feedback",
+                "data_source": {
+                    "literature_based_evidence": "In qualitative research, user feedback is pivotal for understanding user perspectives and driving product improvements. Grounded Theory and Thematic Analysis often prioritize such feedback to develop a deeper understanding of user needs and experiences.",
+                    "content_based_evidence": "User_Feedback code encompasses all forms of feedback from users that are relevant to the research question which seeks to explore user experience improvements.",
+                    "logic_based_evidence": "The code seems not entirely redundant with other codes given the specific focus on user's feedback rather than other forms of input. Clarity-wise, this code captures a distinct type of data important for user-centric analyses."
+                },
+                "reasoning": "The User_Feedback code is supported by both research methodologies and content requirements as it gathers direct input from users. It adds distinct conceptual value as it focuses explicitly on feedback that could directly affect user experience considerations.",
+                "resolution": "retain",
+                "justification": "User_Feedback is necessary and distinct as it captures user perspectives vital for achieving the research question objectives focused on understanding and improving user experiences."
+            },
+            {
+                "code": "Technical_Issues",
+                "data_source": {
+                    "literature_based_evidence": "Analyzing technical issues is essential for user experience research, particularly when technology usability is a focus, as identified in frameworks like Human-Computer Interaction studies.",
+                    "content_based_evidence": "The code is intended to capture all issues related to technology functionalities that might affect the user experience and complicate the navigation or use of the system in focus.",
+                    "logic_based_evidence": "Without redundancy, this code addresses a specific category of data that is often distinct from general user feedback, which might include subjective experiences rather than observed technical faults."
+                },
+                "reasoning": "The evidence suggests a clear and unique domain for capturing specific aspects of user challenges with technology, which can be critical for user experience research and product improvement. There is a conceptual clarity that differentiates it from broadly defined feedback or usability codes.",
+                "resolution": "retain",
+                "justification": "Technical_Issues is an essential component of understanding user experience by specifically addressing the technical aspects that can hinder or enhance user engagement with technology."
+            },
+            {
+                "code": "Usability_Feedback",
+                "data_source": {
+                    "literature_based_evidence": "Usability testing is a core component of user experience research, as highlighted in usability design frameworks and Human-Computer Interaction studies.",
+                    "content_based_evidence": "Usability_Feedback is aimed at capturing effectiveness, efficiency, and satisfaction in a specific user environment, aligning with the research's goal of refining user interfaces.",
+                    "logic_based_evidence": "While overlapping with User_Feedback to some extent, Usability_Feedback has a more specialized focus on usability aspects, which is not fully covered by the general feedback code."
+                },
+                "reasoning": "The semantics suggest a potentially nuanced overlap with User_Feedback but provide distinct focus on usability aspects, an essential part of improving user interfaces and operational efficiency as per the research focus.",
+                "resolution": "retain",
+                "justification": "Despite some overlapping areas, Usability_Feedback adds significant value by emphasizing usability insights specifically, which is crucial for understanding how well the system supports user tasks."
+            }
+        ],
+        "decision_agreement_codebook": [
+            {
+                "code": "User_Feedback"
+            },
+            {
+                "code": "Technical_Issues"
+            },
+            {
+                "code": "Usability_Feedback"
+            },
+            {
+                "code": "another_agreed_code"
+            }
+        ]
+    },
+    "Final_codebook": {
+        "codebook": [
+            {
+                "code": "Quality Embedded in Process",
+                "definition": "Software quality is viewed as an integrated part of both the product and the development process.",
+                "inclusion_criteria": [
+                    "Mentions that software quality is not just the end product but also the method and process used to develop it."
+                ],
+                "exclusion_criteria": [
+                    "References to quality as a fixed characteristic without process consideration."
+                ],
+                "typical_examples": [
+                    "Software quality is both outcome and process."
+                ],
+                "atypical_examples": [
+                    "In agile, there was a shift toward code quality and a design that responds to change."
+                ],
+                "participants": [
+                    "Participant 13",
+                    "Participant 10"
+                ],
+                "relevance_to_RQ": "Explains the holistic definition of software quality that includes process aspects.",
+                "notes": "Aligned with 'Quality as Process and Outcome'; merged based on similar emphasis on process and outcome."
+            },
+            {
+                "code": "Conformance to Business Needs",
+                "definition": "A defining attribute of software quality is its ability to meet business requirements.",
+                "inclusion_criteria": [
+                    "Statements emphasizing alignment with business requirements as crucial to quality."
+                ],
+                "exclusion_criteria": [
+                    "Just mentions quality without reference to business needs."
+                ],
+                "typical_examples": [
+                    "The product quality is a functioning product free of defects and conforms with the business needs."
+                ],
+                "atypical_examples": [
+                    "But for the purpose of a definition, I would say quality takes place in the process level."
+                ],
+                "participants": [
+                    "Participant 17"
+                ],
+                "relevance_to_RQ": "Addresses the aspect of quality concerning business value, a critical factor in understanding software quality.",
+                "notes": "Aligned with 'Conformity to Business Needs'; merged due to identical focus on business requirements."
+            },
+            {
+                "code": "Challenges in Defining Quality",
+                "definition": "Quality is acknowledged as a complex and subjective concept.",
+                "inclusion_criteria": [
+                    "Expressions of difficulty or variability in defining or measuring quality."
+                ],
+                "exclusion_criteria": [
+                    "Descriptions of quality as a uniform or simple concept."
+                ],
+                "typical_examples": [
+                    "It is a challenging question because quality is a subjective concept."
+                ],
+                "atypical_examples": [
+                    "Software quality is the end result."
+                ],
+                "participants": [
+                    "Participant 1"
+                ],
+                "relevance_to_RQ": "Highlights the subjective nature of quality, implying the need for diverse perspectives in understanding it.",
+                "notes": "Retained due to its distinct emphasis on the complexity and subjectivity of quality, differing from 'Quality as Subjective'."
+            },
+            {
+                "code": "Internal Code Quality",
+                "definition": "Focus on the internal aspects of code like maintainability, reusability, and readability as essential to quality.",
+                "inclusion_criteria": [
+                    "Emphasis on code attributes like maintainability, scalability, or simplicity as indicators of quality."
+                ],
+                "exclusion_criteria": [
+                    "Focus solely on external or end-user satisfaction aspects."
+                ],
+                "typical_examples": [
+                    "Internal quality has to do with the way that the system has been built and designed."
+                ],
+                "atypical_examples": [
+                    "First and most, the product confirms to the requirements and free of defects."
+                ],
+                "participants": [
+                    "Participant 12"
+                ],
+                "relevance_to_RQ": "Offers an insight into the technical dimensions considered in defining software quality.",
+                "notes": "Aligned with 'Internal Quality Standards' due to focus on internal attributes like maintainability; merged to reflect shared concerns."
+            },
+            {
+                "code": "Continuous Improvement",
+                "definition": "Emphasizes the importance of ongoing process refinement and learning in achieving quality.",
+                "inclusion_criteria": [
+                    "Mentions of retrospectives, learning from mistakes, and process refinements as part of quality initiatives."
+                ],
+                "exclusion_criteria": [
+                    "One-time quality checks or end-of-process quality assessments."
+                ],
+                "typical_examples": [
+                    "Agile believes in continuous learning and improvement."
+                ],
+                "atypical_examples": [
+                    "Quality doesn\u2019t come without a process and practices."
+                ],
+                "participants": [
+                    "Participant 17",
+                    "Participant 6"
+                ],
+                "relevance_to_RQ": "Describes a dynamic approach to maintaining high quality in software through iterative improvements.",
+                "notes": "Retained for its focus on iterative process improvements, aligning with both roles' emphasis on continuous enhancement practices."
+            },
+            {
+                "code": "User Feedback Integration",
+                "definition": "Quality improvement through incorporating user feedback during and after development phases.",
+                "inclusion_criteria": [
+                    "Mentions of demos, user feedback, or changing requirements."
+                ],
+                "exclusion_criteria": [
+                    "Internal quality discussions without user mention."
+                ],
+                "typical_examples": [
+                    "When the project was released, there were no surprises for them."
+                ],
+                "atypical_examples": [
+                    "We need the whole hour just for this question! But, let\u2019s make it simple."
+                ],
+                "participants": [
+                    "Participant 19",
+                    "Participant 21",
+                    "Participant 31"
+                ],
+                "relevance_to_RQ": "Describes the role of user feedback in shaping quality definitions in Scrum environments.",
+                "notes": "Retained due to distinct focus on user perspectives, not covered by other codes; supported by Discussion-Agent's evidence."
+            },
+            {
+                "code": "Process Quality Assurance",
+                "definition": "Use of established processes like code reviews and CI/CD to ensure delivery quality.",
+                "inclusion_criteria": [
+                    "Discussions about testing environments, code reviews, or checklist adherence."
+                ],
+                "exclusion_criteria": [
+                    "Solely discussing end product quality without process context."
+                ],
+                "typical_examples": [
+                    "We have check lists and documented guidelines."
+                ],
+                "atypical_examples": [
+                    "We don\u2019t achieve software quality without a process that implement and foster quality practices."
+                ],
+                "participants": [
+                    "Participant 1",
+                    "Participant 3",
+                    "Participant 11"
+                ],
+                "relevance_to_RQ": "Shows how process adherence and QA practices define and improve quality.",
+                "notes": "Retained due to its specific focus on structured process assurance; adds a necessary dimension to quality practices."
+            }
+        ]
+    },
+    "current_num_token": {
+        "input_token": 139725,
+        "output_token": 5704
+    }
+}
