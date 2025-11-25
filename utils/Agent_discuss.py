@@ -106,7 +106,7 @@ class DiscussFlowModel:
         reviewer.set_meta_prompt(reviewer_system)
         reviewer.event(reviewer_user)
         reviewer_response = reviewer.ask()
-        reviewer.memory(reviewer_response, False, True)
+        reviewer.memory(reviewer_response, False, False)
         self.input_token += reviewer.input_token
         self.output_token += reviewer.output_token
 
@@ -126,7 +126,7 @@ class DiscussFlowModel:
         discussion.set_meta_prompt(discussion_system)
         discussion.event(discussion_user)
         discussion_response = discussion.ask()
-        discussion.memory(discussion_response, False, True)
+        discussion.memory(discussion_response, False, False)
         self.input_token += discussion.input_token
         self.output_token += discussion.output_token
 

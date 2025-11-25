@@ -29,20 +29,21 @@ def experiment_discuss_flow(roles, roles_identity, texts, model_name, discuss_co
     for role_id, positionality, role_init_codebook in zip(roles_identity, roles_positionality, roles_init_codebook):
         role_id["positionality"] = positionality
         role_id["init_codebook"] = role_init_codebook["codebook"]
+        print(role_init_codebook["codebook"])
 
     init_codebook = []
     for role_identity in roles_identity:
         init_codebook.append({"role": role_identity["role"], "codebook": role_identity["init_codebook"]})
 
     agreed_disagreed_codebook = discuss_flow.codebook_reviewer(Reviewer, init_codebook)
-    final_agreed_codebook = discuss_flow.codebook_discussion(Discussion, agreed_disagreed_codebook)
-    final_codebook = discuss_flow.codebook_judge(Judge, init_codebook, agreed_disagreed_codebook, final_agreed_codebook,
-                                                 rq)
+    decision_agreed_codebook = discuss_flow.codebook_discussion(Discussion, agreed_disagreed_codebook)
+    final_codebook = discuss_flow.codebook_judge(Judge, init_codebook, agreed_disagreed_codebook,
+                                                 decision_agreed_codebook, rq)
 
     result = {
         "Role_Team": roles_identity,
         "Agreed_disagreed_codebook": agreed_disagreed_codebook,
-        "Final_agreed_codebook": final_agreed_codebook,
+        "Decision_agreed_codebook": decision_agreed_codebook,
         "Final_codebook": final_codebook,
         "current_num_token": {"input_token": discuss_flow.input_token,
                               "output_token": discuss_flow.output_token}
