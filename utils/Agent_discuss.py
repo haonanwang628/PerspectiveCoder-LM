@@ -27,6 +27,28 @@ class DiscussFlowModel:
 
         return roles
 
+    def role_stage(self, role, rq=None):
+        # roles init codebook generate
+        if rq is not None:
+            role.set_meta_prompt(
+                self.config["Agents"]["Coder"]["system_non_pos_rq"].replace("{datasets}", self.target_text)
+                .replace("{RQ}", rq))
+            role.event(self.config["Agents"]["Coder"]["user_non_pos_rq"])
+        else:
+            role.set_meta_prompt(
+                self.config["Agents"]["Coder"]["system_non_pos"].replace("{datasets}", self.target_text))
+            role.event(self.config["Agents"]["Coder"]["user_non_pos"])
+        role_response = role.ask()
+        role.memory(role_response, False, True)
+        self.input_token += role.input_token
+        self.output_token += role.output_token
+
+        try:
+            codebook = json.loads(role_response)
+        except Exception:
+            codebook = json.loads(eval(role_response.replace('```', "'''").replace('json', '').strip()))
+        return codebook
+
     def roles_stage(self, roles, roles_identity, rq=None):
         init_codebook, roles_positionality, role_prompt = [], [], []
 
@@ -56,7 +78,7 @@ class DiscussFlowModel:
             # roles init codebook generate
             if rq is not None:
                 role.set_meta_prompt(
-                    self.config["Agents"]["Coder"]["system_rq"].replace("{dataset}", self.target_text)
+                    self.config["Agents"]["Coder"]["system_rq"].replace("{datasets}", self.target_text)
                     .replace("{positionality statement}", roles_positionality[i]).replace("{RQ}", rq))
                 role.event(self.config["Agents"]["Coder"]["user_rq"])
             else:
@@ -74,7 +96,7 @@ class DiscussFlowModel:
                 parsed = json.loads(eval(role_response.replace('```', "'''").replace('json', '').strip()))
             init_codebook.append(parsed)
 
-        return roles_positionality, init_codebook,
+        return roles_positionality, init_codebook
 
     def codebook_reviewer(self, reviewer, init_codebook):
 
@@ -91,13 +113,14 @@ class DiscussFlowModel:
         try:
             agreed_disagreed_codebook = json.loads(reviewer_response)
         except Exception:
-            agreed_disagreed_codebook = json.loads(eval(reviewer_response.replace('```', "'''").replace('json', '').strip()))
+            agreed_disagreed_codebook = json.loads(
+                eval(reviewer_response.replace('```', "'''").replace('json', '').strip()))
 
         return agreed_disagreed_codebook
 
     def codebook_discussion(self, discussion, agreed_disagreed_codebook):
         discussion_system = self.config["Agents"]["Discussion"]["system"]
-        discussion_user = self.config["Agents"]["Discussion"]["user"]\
+        discussion_user = self.config["Agents"]["Discussion"]["user"] \
             .replace("{codebook}", str(agreed_disagreed_codebook))
 
         discussion.set_meta_prompt(discussion_system)
@@ -125,9 +148,9 @@ class DiscussFlowModel:
                 .replace("{discussion_output}", str(final_agreed_codebook))
         else:
             Judge_system = self.config["Agents"]["Judge"]["system"]
-            Judge_user = self.config["Agents"]["Judge"]["user"]\
-                .replace("{init_codebook}", str(init_codebook))\
-                .replace("{reviewer_output}", str(agreed_disagreed_codebook))\
+            Judge_user = self.config["Agents"]["Judge"]["user"] \
+                .replace("{init_codebook}", str(init_codebook)) \
+                .replace("{reviewer_output}", str(agreed_disagreed_codebook)) \
                 .replace("{discussion_output}", str(final_agreed_codebook))
 
         Judge.set_meta_prompt(Judge_system)

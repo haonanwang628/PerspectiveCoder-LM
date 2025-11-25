@@ -1,164 +1,173 @@
 {
+    "Role": "Role1",
     "Codebook": [
         {
-            "code": "Software quality",
-            "definition": "Perceptions and standards related to the overall quality of software development and output.",
+            "code": "Quality as Process and Product",
+            "definition": "Software quality encompasses both the development process and the final product.",
             "inclusion_criteria": [
-                "Mentions of software quality as a general concept.",
-                "References to standards, assurance, or practices aimed at improving software."
+                "Mentions both process and product in relation to quality",
+                "Discusses how process improvements influence product quality"
             ],
             "exclusion_criteria": [
-                "Does not explicitly mention 'software quality'.",
-                "Focuses solely on specific practices without general context."
+                "Only discusses process or product without linking the two to quality"
             ],
             "typical_examples": [
-                "Software quality is a complex concept",
-                "Software quality standards"
+                "Software quality is both outcome and process."
             ],
             "atypical_examples": [
-                "Scrum",
-                "Psychological safety"
+                "Quality takes place at three levels: product, software code, and development process."
             ],
             "participants": [
-                "P1",
-                "P3",
-                "P5"
+                "Participant 1",
+                "Participant 13"
             ],
-            "frequency": 7,
-            "notes": "This code encapsulates broad interpretations of quality without delving into distinct technical specifics."
+            "relevance_to_RQ": "This code captures the dual nature of how practitioners define software quality, recognizing the importance of both the development process and the product outcome.",
+            "notes": "Capture the dual aspect of quality in both process and product."
         },
         {
-            "code": "Conformity to business needs",
-            "definition": "Ensuring the software meets the outlined business objectives and requirements.",
+            "code": "Internal Quality",
+            "definition": "Focus on the quality of the code and design, including maintainability and scalability.",
             "inclusion_criteria": [
-                "Mentions of business objectives in relation to software development.",
-                "References to how well software satisfies client or stakeholder needs."
+                "Mentions internal code quality",
+                "Discusses maintainability and design sustainability"
             ],
             "exclusion_criteria": [
-                "Discussions of general quality without business focus."
+                "Only mentions external quality or user satisfaction"
             ],
             "typical_examples": [
-                "Meets the business needs",
-                "Conformity to business requirements"
+                "Internal quality has to do with how the software is constructed or built.",
+                "We aim for clean code and sustainability of the design."
             ],
             "atypical_examples": [
-                "Psychological safety",
-                "Clean code"
+                "It is important to also assure internal quality."
             ],
             "participants": [
-                "P2",
-                "P4",
-                "P6"
+                "Participant 2",
+                "Participant 12",
+                "Participant 15"
             ],
-            "frequency": 6,
-            "notes": "This code is specifically concerned with alignment between software function and business goals."
+            "relevance_to_RQ": "Highlights the dimensions of software quality related to the technical aspects of development, specifically code quality and design.",
+            "notes": "Internal aspects are vital for agile processes that require frequent changes."
         },
         {
-            "code": "Free of defects",
-            "definition": "Software being void of bugs, errors, or faults.",
+            "code": "External Quality",
+            "definition": "External quality is defined by a product being free of defects and meeting user needs.",
             "inclusion_criteria": [
-                "Mentions of software being bug-free or error-free.",
-                "Reference to testing or assurance with the aim of eliminating defects."
+                "Mentions defect-free or user requirements",
+                "Focuses on the end product"
             ],
             "exclusion_criteria": [
-                "General quality discussions not mentioning defects.",
-                "Aesthetic or design-focused quality attributes not related to errors."
+                "Focuses only on the process or internal quality aspects"
             ],
             "typical_examples": [
-                "No bugs",
-                "Free of defects"
+                "The product quality is a functioning product free of defects and conforms with the business needs."
             ],
             "atypical_examples": [
-                "Meets user requirements",
-                "Sustainable design"
+                "Software quality means ... no bugs."
             ],
             "participants": [
-                "P1",
-                "P3",
-                "P5"
+                "Participant 3",
+                "Participant 4",
+                "Participant 19"
             ],
-            "frequency": 8,
-            "notes": "This code is often connected with iterative testing and QA processes to achieve bug-free results."
+            "relevance_to_RQ": "Emphasizes the user-centric aspect of software quality measurements in agile development.",
+            "notes": "Commonly viewed as a main priority for ensuring software meets client expectations."
         },
         {
-            "code": "Continuous improvements",
-            "definition": "Ongoing efforts to enhance the software development process or product quality.",
+            "code": "Continuous Improvement",
+            "definition": "Ongoing evaluation and enhancement of the process to improve quality.",
             "inclusion_criteria": [
-                "Mentions of ongoing or iterative improvements.",
-                "References to processes like Scrum aimed at constant betterment."
+                "Mentions retrospectives, review, or continuous processes improvements"
             ],
             "exclusion_criteria": [
-                "Static or final product discussions without iterative context."
+                "Discusses quality without mention of iterative improvement"
             ],
             "typical_examples": [
-                "Continuous improvements",
-                "Reflecting on the Scrum process"
+                "Agile is about continuous improvement.",
+                "The process is always subject to improvements."
             ],
             "atypical_examples": [
-                "Clean code",
-                "Software performance"
+                "We learn from our mistakes and improve. It's a journey!"
             ],
             "participants": [
-                "P2",
-                "P4",
-                "P6"
+                "Participant 5",
+                "Participant 9",
+                "Participant 12"
             ],
-            "frequency": 5,
-            "notes": "This code is linked to Agile methodologies and a focus on refinement over time."
+            "relevance_to_RQ": "Illustrates the adaptive strategy in Agile methodologies to keep enhancing quality standards.",
+            "notes": "Retrospective practices foster ongoing process enhancements."
         },
         {
-            "code": "Scrum",
-            "definition": "Use of Scrum agile process in enhancing quality and productivity in software development.",
+            "code": "Collaboration and Accountability",
+            "definition": "Quality is enhanced through team collaboration and shared responsibility.",
             "inclusion_criteria": [
-                "Explicit mentions of Scrum.",
-                "Describing the impact or processes related to Scrum."
+                "Mentions team collaboration or accountability",
+                "Discusses shared ownership of quality"
             ],
             "exclusion_criteria": [
-                "Non-Agile methodologies.",
-                "Mentions of Scrum with no quality context."
+                "Only discusses individual roles or responsibilities"
             ],
             "typical_examples": [
-                "Scrum",
-                "Transparency in Scrum"
+                "Collaboration helps better quality by facilitating intensive exchange of information and feedback."
             ],
             "atypical_examples": [
-                "Software testing",
-                "User acceptance testing"
+                "In agile, everyone is accountable for everything they implement."
             ],
             "participants": [
-                "P1",
-                "P3",
-                "P5"
+                "Participant 2",
+                "Participant 6",
+                "Participant 14"
             ],
-            "frequency": 5,
-            "notes": "Often cited alongside continuous improvement as part of Agile approaches."
+            "relevance_to_RQ": "Reveals the social dynamics in Agile that influence quality through engagement and collaborative effort.",
+            "notes": "Accountability drives quality through trust and transparency within teams."
         },
         {
-            "code": "Collaboration",
-            "definition": "Working together in teams or with stakeholders to achieve better software outcomes.",
+            "code": "Agile Practices and Tools",
+            "definition": "Certain Agile practices and tools support maintaining and improving quality.",
             "inclusion_criteria": [
-                "Mentions of teamwork or collaborative effort.",
-                "References to shared goals or joint development processes."
+                "Mentions specific Agile practices or tools such as Scrum, TDD, etc.",
+                "Accounts for specific roles like QA in Agile context"
             ],
             "exclusion_criteria": [
-                "Individual-focused achievements.",
-                "Non-collective quality discussions."
+                "Omits role of Agile practices or tools in quality"
             ],
             "typical_examples": [
-                "Collaboration",
-                "Peer to peer learning"
+                "Agile calls for TDD to support iterative development."
             ],
             "atypical_examples": [
-                "Code review",
-                "Structural quality"
+                "QA practices are embedded in Agile through Scrum task planning."
             ],
             "participants": [
-                "P2",
-                "P4",
-                "P6"
+                "Participant 13",
+                "Participant 30",
+                "Participant 33"
             ],
-            "frequency": 6,
-            "notes": "Highlighted as an essential component in Agile and modern software development practices."
+            "relevance_to_RQ": "Shows how specific practices within Agile frameworks contribute to ensuring software quality.",
+            "notes": "Supports efficacy of Agile with specific methodologies aiding quality control."
+        },
+        {
+            "code": "Expectation Management",
+            "definition": "Quality aligns with managing business expectations and needs iteration.",
+            "inclusion_criteria": [
+                "Mentions aligning developments with user/business expectations",
+                "Highlights the role of feedback in managing expectations"
+            ],
+            "exclusion_criteria": [
+                "Focuses solely on technical or process details without business alignment"
+            ],
+            "typical_examples": [
+                "You can see quality when business needs are met."
+            ],
+            "atypical_examples": [
+                "Quality management involves clear expectation settings in Agile."
+            ],
+            "participants": [
+                "Participant 5",
+                "Participant 9",
+                "Participant 22"
+            ],
+            "relevance_to_RQ": "Signifies the relationship between Agile processes and how business expectations are mediated for quality outcomes.",
+            "notes": "Expectation management is essential in refining user stories and iterations for quality delivery."
         }
     ]
 }

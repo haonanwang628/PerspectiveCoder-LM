@@ -1,26 +1,18 @@
 import argparse
-from utils.Agent_discuss import DiscussFlowModel, SingleModel
+from utils.Agent_discuss import DiscussFlowModel
 from utils.Function import import_json, save_json, roles_identity_generate
 import os
 
 
-def experiment_discuss_flow(texts, model_name, discuss_config, rq=None):
-    roles = ["Role1", "Role2", "Role3", "Reviewer", "Discussion", "Judge"]
-
+def experiment_discuss_flow(roles, roles_identity, texts, model_name, discuss_config, rq=None):
     if isinstance(model_name, list):
-        models_name = dict(zip(roles, args.model_name))
+        models_name = dict(zip(roles, model_name))
     elif isinstance(model_name, str):
         models_name = {role: model_name for role in roles}
     else:
         return
-
-    roles_identity = roles_identity_generate(len(models_name) - 3)  # 固定随机数种子生成
-    # roles_identity = roles_identity_generate(1)
-    # roles_identity = [roles_identity[0] for _ in range(3)]
-
     datasets = []
 
-    print(f"------------Current Target Dataset------------")
     for _, text in enumerate(texts):
         text.pop("code", None)
         datasets.append(text)
@@ -58,69 +50,27 @@ def experiment_discuss_flow(texts, model_name, discuss_config, rq=None):
     save_json(f"{args.output_dir}\\discuss_process\\json\\discuss.json", result)
 
 
-def experiment_baseline1(texts, model_name, SingleLLM_config):
-    SingleLLM = SingleModel(SingleLLM_config, model_name)
-    agent = SingleLLM.agent_init()
-    dataset = []
-    for i, text in enumerate(texts):
+def experiment_single_flow(role, texts, model_name, discuss_config, rq=None):
+    role_name = role[0]
+    models_name = {role_name: model_name}
+    datasets = []
+
+    for _, text in enumerate(texts):
         text.pop("code", None)
-        dataset.append(text)
-    SingleLLM.target_text = str(dataset)
-    annotate = SingleLLM.baseline1_codebook_generate(agent)
-    codebook = {"Codebook": annotate['codebook']}
-    save_json(f"{args.output_dir}\\baseline1\\json\\baseline1.json", codebook)
-    print(f"Finish !")
+        datasets.append(text)
 
+    single_flow = DiscussFlowModel(discuss_config, models_name)
+    single_flow.target_text = str(datasets)
 
-def experiment_baseline2(texts, model_name, discuss_config, rq=None):
-    discuss = DiscussFlowModel(discuss_config, {"role1": model_name})
-    roles_identitys = roles_identity_generate(3)
+    role = single_flow.agents_init()
+    role_codebook = single_flow.role_stage(role[0], rq=rq)
 
-    for j, roles_identity in enumerate(roles_identitys):
-        roles_positionality_cached = None
-        roles_identity = [roles_identity]
-        for i, text in enumerate(texts):
-            print(f"------------Current Target Text {i + args.start_step}------------")
-            discuss.target_text = text["data_chunk"]
+    result = {
+        "Role": role_name,
+        "Codebook": role_codebook["codebook"],
+    }
 
-            roles, _ = discuss.agents_init(False)
-            if roles_positionality_cached is None and args.start_step == 0:
-                roles_positionality_cached, roles_annotate = discuss.role_stage(roles, roles_identity, rq=rq,
-                                                                                one_role=True,
-                                                                                roles_positionality=None)
-                save_json(f"{args.output_dir}\\baseline2\\role_positionality.json", roles_positionality_cached)
-            else:
-                if args.start_step > 0:
-                    roles_positionality_cached = import_json(
-                        f"{args.output_dir}\\baseline2\\role_positionality.json")
-                _, roles_annotate = discuss.role_stage(roles, roles_identity, rq=rq, one_role=True,
-                                                       roles_positionality=roles_positionality_cached)
-            # roles_positionality_cached = import_json(f"{args.output_dir}\discuss_process\json\\roles_positionality.json")
-            # _, roles_annotate = discuss.role_stage(roles, roles_identity, rq=rq, one_role=True,
-            #                                       roles_positionality=roles_positionality_cached)
-            for role_id, positionality in zip(roles_identity, roles_positionality_cached):
-                role_id["positionality"] = positionality
-            codebook = {"target_text": text["data_chunk"],
-                        "Role": roles_identity,
-                        "Codebook": roles_annotate}
-            save_json(f"{args.output_dir}\\baseline2\\json\\baseline2_role{j + 1}_{i}.json", codebook)
-            print(f"Finish !")
-
-
-# def experiment_baseline3(texts, model_name, SingleLLM_config):
-#     SingleLLM = SingleModel(SingleLLM_config, model_name)
-#     agent = SingleLLM.agent_init()
-#     codebook = []
-#     roles_identity = roles_identity_generate(3)  # 固定随机数种子生成
-#     for i, text in enumerate(texts):
-#         print(f"------------Current Target Text {i + args.start_step}------------")
-#         SingleLLM.target_text = text["data_chunk"]
-#         annotate = SingleLLM.baseline23_codebook_generate(agent, roles_identity)
-#         codebook.append({"target_text": text["data_chunk"],
-#                          "Role_Team": roles_identity,
-#                          "Codebook": annotate})
-#         print(f"Finish !")
-#     save_json(f"{args.output_dir}\\baseline3\codebook.json", codebook)
+    save_json(f"{args.output_dir}\\baseline1\\json\\baseline1.json", result)
 
 
 def parse_args():
@@ -138,7 +88,7 @@ def parse_args():
     parser.add_argument("-m", "--model-name", type=str, default="gpt-4o", help="Model name")
     # parser.add_argument("-t", "--temperature", type=float, default=0, hewlp="Sampling temperature")
 
-    parser.add_argument("-s", "--start-step", type=float, default=0, help="Data iteration starting step")
+    parser.add_argument("-rq", "--research-question", type=str, default="", help="Data iteration starting step")
     parser.add_argument("-exp", "--experiment-name", type=float, default=0,
                         help="0: discuss, 1: baseline1, 2: baseline2")
 
@@ -149,20 +99,27 @@ if __name__ == "__main__":
     args = parse_args()
 
     target_texts = import_json(args.input_file)
-    target_texts = target_texts[args.start_step:]
     config = import_json(args.config_dir)
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
         os.mkdir(os.path.join(args.output_dir, "baseline1"))
         os.mkdir(os.path.join(args.output_dir, "baseline1", "json"))
-        os.mkdir(os.path.join(args.output_dir, "baseline2"))
-        os.mkdir(os.path.join(args.output_dir, "baseline2", "json"))
         os.mkdir(os.path.join(args.output_dir, "discuss_process"))
         os.mkdir(os.path.join(args.output_dir, "discuss_process", "json"))
 
+    # 暂且先将这个作为默认rq（TBD）
+    rq = '''1.How Do Scrum Practitioners Define Software Quality?
+            '''
+
     if args.experiment_name == 0:
-        experiment_discuss_flow(target_texts, args.model_name, config)
+        roles = ["Role1", "Role2", "Role3", "Reviewer", "Discussion", "Judge"]
+        roles_identity = roles_identity_generate(len(roles) - 3)
+        experiment_discuss_flow(roles, roles_identity, target_texts, args.model_name, config, rq)
     elif args.experiment_name == 1:
-        experiment_baseline1(target_texts, args.model_name, config)
+        roles = ["Role1"]
+        experiment_single_flow(roles, target_texts, args.model_name, config, rq)
     elif args.experiment_name == 2:
-        experiment_baseline2(target_texts, args.model_name, config)
+        roles = ["Role1", "Role2", "Role3", "Reviewer", "Discussion", "Judge"]
+        roles_identity = roles_identity_generate(1)
+        roles_identity = [roles_identity[0] for _ in range(3)]
+        experiment_discuss_flow(roles, roles_identity, target_texts, args.model_name, config, rq)
