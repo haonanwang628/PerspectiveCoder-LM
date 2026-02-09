@@ -20,8 +20,8 @@ api_key = {
     "gpt-4o-mini": gpt_api,
     "gpt-4o": gpt_api,
     "gpt-5": gpt_api,
-    "deepseek-chat": "sk-9bc06d1289704b05b7b52db5285dba67",
-    "deepseek-reasoner": "sk-9bc06d1289704b05b7b52db5285dba67"
+    "deepseek-chat": "",
+    "deepseek-reasoner": ""
 }
 # import os
 # api_key = {

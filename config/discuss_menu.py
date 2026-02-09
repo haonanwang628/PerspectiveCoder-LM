@@ -1,33 +1,80 @@
-# debate menu
-roles_Id = ["Management", "Product Owners", "Scrum Masters", "Quality Assurance", "Software developers",
-            "Computer Scientist"]
-Intended_Study_Level = ["Bachelors", "Masters", "MBA", "PhD"]
-Subject = [
-    "Art & Design", "Computer Science", "Agriculture & Forestry", "Biological Sciences", "Accounting",
-    "Architecture", "Data Science", "Anatomy", "Chemistry", "Business",
-    "Archaeology", "Engineering – Chemical", "Anthropology", "Earth & Marine Sciences", "Communication",
-    "Classics", "Engineering – Civil", "Dentistry", "Environmental Sciences", "Development Studies",
-    "English Language and Literature", "Engineering – Electrical", "Medicine", "Geography", "Economics & Econometrics",
-    "History", "Engineering – Mechanical", "Nursing", "Geology", "Education",
-    "Performing Arts", "Engineering – Mineral", "Pharmacy", "Geophysics", "Hospitality & Leisure Management",
-    "History of Art", "Petroleum Engineering", "Veterinary Science", "Mathematics", "Law",
-    "Linguistics", "Materials Science", "Library Management",
-    "Modern Languages", "Physics", "Marketing",
-    "Philosophy", "Politics",
-    "Theology", "Psychology", "Social Policy", "Sociology",
-    "Sports-related Subjects", "Statistics"
+# discussion menu
+Gender = [
+    "Woman (including Trans Female/Trans Woman)",
+    "Man (including Trans Male/Trans Man)",
+    "Non-binary (would like to give more detail)"
 ]
-Research_Interest = ["Computer and Information Sciences", "Aerospace", "Aeronautical", "Astronautical Engineering",
-                     "Bioengineering and Biomedical Engineering", "Chemical Engineering", "Civil Engineering",
-                     "Electrical", "Electronic", "Communications Engineering",
-                     "Industrial and Manufacturing Engineering", "Mechanical Engineering", "Electrical", "Electronic",
-                     "Communications Engineering", "Atmospheric Science", "Meteorology",
-                     "Geological and Earth Sciences", "Ocean Sciences and Marine Sciences", "Agricultural Sciences",
-                     "Biological and Biomedical Sciences", "Health Sciences", "Natural Resources and Conservation",
-                     "Mathematics and Statistics", "Astronomy and Astrophysics", "Chemistry", "Materials Science",
-                     "Physics", "Psychology", "Anthropology", "Economics", "Education", "Law", "Other Non-S&E Fields"]
-Dimensions_Source = ["Epistemological Assumptions", "Methodological Biases", "Cultural/Personal Biases",
-                     "Ethical/Societal Assumptions"]
+Education = [
+    "Undergraduate degree (BA/BSc/other)",
+    "Graduate degree (MA/MSc/MPhil/other)",
+    "Doctorate degree (PhD/other)"
+]
+Race_Ethnicity = [
+    "White/Caucasian",
+    "Black/African American",
+    "East Asian",
+    "Latino/Hispanic",
+    "Mixed",
+    "South East Asian",
+    "Native American or Alaskan Native",
+    "South Asian",
+    "African",
+    "White / Sephardic Jew",
+    "Other"
+]
+Age = [
+    "24-34",
+    "34-44",
+    "44-54",
+    "54-64",
+    "18-24"
+]
+Degree_Subject = [
+    "Social Sciences",
+    "Arts & Humanities",
+    "Other",
+    "Information and Communication Technologies",
+    "Health and Welfare",
+    "Engineering, Manufacturing and Construction",
+    "Natural Sciences",
+    "Administration & Law",
+    "Education",
+    "Mathematics and Statistics",
+    "Services",
+    "Agriculture, Forestry, Fisheries and Veterinary",
+    "Journalism & Information Business"
+]
+Reddit_Use = ["Regular use(>once per month)", "Regular use(<once per month)"]
+
+# roles_Id = ["Management", "Product Owners", "Scrum Masters", "Quality Assurance", "Software developers",
+#             "Computer Scientist"]
+# Intended_Study_Level = ["Bachelors", "Masters", "MBA", "PhD"]
+# Subject = [
+#     "Art & Design", "Computer Science", "Agriculture & Forestry", "Biological Sciences", "Accounting",
+#     "Architecture", "Data Science", "Anatomy", "Chemistry", "Business",
+#     "Archaeology", "Engineering – Chemical", "Anthropology", "Earth & Marine Sciences", "Communication",
+#     "Classics", "Engineering – Civil", "Dentistry", "Environmental Sciences", "Development Studies",
+#     "English Language and Literature", "Engineering – Electrical", "Medicine", "Geography", "Economics & Econometrics",
+#     "History", "Engineering – Mechanical", "Nursing", "Geology", "Education",
+#     "Performing Arts", "Engineering – Mineral", "Pharmacy", "Geophysics", "Hospitality & Leisure Management",
+#     "History of Art", "Petroleum Engineering", "Veterinary Science", "Mathematics", "Law",
+#     "Linguistics", "Materials Science", "Library Management",
+#     "Modern Languages", "Physics", "Marketing",
+#     "Philosophy", "Politics",
+#     "Theology", "Psychology", "Social Policy", "Sociology",
+#     "Sports-related Subjects", "Statistics"
+# ]
+# Research_Interest = ["Computer and Information Sciences", "Aerospace", "Aeronautical", "Astronautical Engineering",
+#                      "Bioengineering and Biomedical Engineering", "Chemical Engineering", "Civil Engineering",
+#                      "Electrical", "Electronic", "Communications Engineering",
+#                      "Industrial and Manufacturing Engineering", "Mechanical Engineering", "Electrical", "Electronic",
+#                      "Communications Engineering", "Atmospheric Science", "Meteorology",
+#                      "Geological and Earth Sciences", "Ocean Sciences and Marine Sciences", "Agricultural Sciences",
+#                      "Biological and Biomedical Sciences", "Health Sciences", "Natural Resources and Conservation",
+#                      "Mathematics and Statistics", "Astronomy and Astrophysics", "Chemistry", "Materials Science",
+#                      "Physics", "Psychology", "Anthropology", "Economics", "Education", "Law", "Other Non-S&E Fields"]
+# Dimensions_Source = ["Epistemological Assumptions", "Methodological Biases", "Cultural/Personal Biases",
+#                      "Ethical/Societal Assumptions"]
 # Disciplinary_Background = ["Engineering", "Psychology", "Law", "Sociology", "UX/Design", "Business/Management",
 #                            "Healthcare", "Education", "Ethics", "Computer Science"]
 # Core_Values = ["Fairness", "Efficiency", "Accuracy", "Inclusivity", "Transparency", "Empathy", "User Experience",
