@@ -18,11 +18,12 @@ def roles_identity_generate(roles_num, role=None):
     roles_identity = []
     for i in range(roles_num):
         roles_identity.append({
-            "role": random.choice(roles_Id) if not role else role[i],
-            "Intended_Study_Level": random.choice(Intended_Study_Level),
-            "Subject": random.choice(Subject),
-            "Research_Interest": random.choice(Research_Interest),
-            "Dimensions_Source": random.choice(Dimensions_Source),
+            "Gender": random.choice(Gender) if not role else role[i],
+            "Education": random.choice(Education),
+            "Race_Ethnicity": random.choice(Race_Ethnicity),
+            "Age": random.choice(Age),
+            "Degree_Subject": random.choice(Degree_Subject),
+            "Reddit_Use": random.choice(Reddit_Use)
         })
     return roles_identity
 

@@ -103,5 +103,7 @@ class Agent:
             self.memory_lst.append({"role": "assistant", "content": f"{memory}"})
         elif self.memory_lst[-1]["role"] == "user":
             self.memory_lst.pop()
+        # if if_memory:
+        #     self.memory_lst.append({"role": "assistant", "content": f"{memory}"})
         if if_print:
             print(f"----- {self.name} -----\n{memory}\n")
