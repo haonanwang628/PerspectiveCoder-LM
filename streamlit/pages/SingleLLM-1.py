@@ -94,6 +94,6 @@ class SingleLLM:
 
 if __name__ == "__main__":
     model_name = "gpt-4o-mini"
-    config = import_json("config/codebook_config.json")
+    config = import_json("config/config.json")
     app = SingleLLM(model_name)
     app.run()
